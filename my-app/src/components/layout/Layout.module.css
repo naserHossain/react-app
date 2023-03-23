@@ -1,0 +1,37 @@
+.app {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.nav {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navItem {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.navItemActive {
+    color: crimson;
+    text-decoration: underline;
+    font-family: bold;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+.main {
+    width: 70%;
+    margin: 2rem auto;
+}
+.footer {
+    background-color: #666;
+    color: #fff;
+    padding: 2rem 4rem;
+}
