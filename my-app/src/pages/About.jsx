@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "../components/buttons/Button";
+import DisplayCount from "../components/display-count/DisplayCount";
 import Layout from "../components/layout/Layout";
-
+import UpdateIncrementDecrement from "../components/update-input/UpdateIncrementDecrement";
 const About = () => {
-    let count = 1;
+    const [count, setCount] = useState(0);
+    const [incrementValue, setIncrementValue] = useState(20);
+    const [decrementValue, setDecrementValue] = useState(10);
+
+    // const state = useState(0);
+
+    function increment() {
+        setCount(count + incrementValue);
+        // state[1](state[0] + 1);
+    }
+
+    function decrement() {
+        setCount(count - decrementValue);
+    }
+
+    function handleIncrementChange(e) {
+        setIncrementValue(parseInt(e.target.value));
+    }
+
+    function handleDecrementChange(e) {
+        setDecrementValue(parseInt(e.target.value));
+    }
+
     return (
         <div>
             <Layout>
-                <h1> Hello I am about page</h1>
-                <h2> Count: {count} </h2>
+                <DisplayCount count={count} />
+                <UpdateIncrementDecrement
+                    incrementValue={incrementValue}
+                    decrementValue={decrementValue}
+                    handleIncrementChange={handleIncrementChange}
+                    handleDecrementChange={handleDecrementChange}
+                />
+                <Button increment={increment} decrement={decrement} />
             </Layout>
         </div>
     );
