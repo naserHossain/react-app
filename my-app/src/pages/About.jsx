@@ -4,11 +4,9 @@ import DisplayCount from "../components/display-count/DisplayCount";
 import Layout from "../components/layout/Layout";
 import UpdateIncrementDecrement from "../components/update-input/UpdateIncrementDecrement";
 const About = () => {
-    const [count, setCount] = useState(0);
-    const [incrementValue, setIncrementValue] = useState(20);
-    const [decrementValue, setDecrementValue] = useState(10);
-
-    // const state = useState(0);
+    const [count, setCount] = useState(null);
+    const [incrementValue, setIncrementValue] = useState(10);
+    const [decrementValue, setDecrementValue] = useState(5);
 
     function increment() {
         setCount(count + incrementValue);
